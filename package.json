@@ -1,0 +1,61 @@
+{
+  "name": "@shiv-kush/logora-sdk",
+  "version": "0.1.0",
+  "description": "Logora SDK: report errors and messages from Node, React Native and browser apps. Buffers locally, retries with backoff, never loses or duplicates an event.",
+  "type": "module",
+  "main": "dist/cjs/index.cjs",
+  "types": "dist/esm/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "npm run clean && tsc -p tsconfig.build.json && node scripts/build-cjs.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/**/*.test.ts",
+    "smoke": "node scripts/smoke.mjs",
+    "prepublishOnly": "npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "license": "UNLICENSED",
+  "module": "dist/esm/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs",
+      "default": "./dist/esm/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "react-native": "dist/esm/index.js",
+  "sideEffects": false,
+  "keywords": [
+    "logging",
+    "error-tracking",
+    "monitoring",
+    "logora",
+    "react-native",
+    "node"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShivBhanKushWaha/Logora_SDK.git"
+  },
+  "homepage": "https://github.com/ShivBhanKushWaha/Logora_SDK#readme",
+  "bugs": {
+    "url": "https://github.com/ShivBhanKushWaha/Logora_SDK/issues"
+  }
+}
