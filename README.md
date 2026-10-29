@@ -130,3 +130,7 @@ LOGORA_ENDPOINT=http://localhost:4000 LOGORA_KEY=lgr_... npm run smoke   # again
 ```
 
 `examples/` has a runnable Node script and a React Native setup. To use the package from another folder before publishing: `npm pack` here, then `npm install ../LogoraSdk/logora-sdk-0.1.0.tgz` there.
+
+## License
+
+[MIT](LICENSE)
