@@ -133,4 +133,4 @@ LOGORA_ENDPOINT=http://localhost:4000 LOGORA_KEY=lgr_... npm run smoke   # again
 
 ## License
 
-[MIT](LICENSE)
+Free to use, not to copy or modify. See [LICENSE](LICENSE).

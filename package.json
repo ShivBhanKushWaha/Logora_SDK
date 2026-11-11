@@ -1,6 +1,6 @@
 {
   "name": "@shiv-kush/logora-sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Logora SDK: report errors and messages from Node, React Native and browser apps. Buffers locally, retries with backoff, never loses or duplicates an event.",
   "type": "module",
   "main": "dist/cjs/index.cjs",
@@ -23,7 +23,7 @@
     "tsx": "^4.19.0",
     "typescript": "^5.7.0"
   },
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "module": "dist/esm/index.js",
   "exports": {
     ".": {
